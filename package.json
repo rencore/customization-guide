@@ -1,0 +1,15 @@
+{
+  "name": "customization-guide",
+  "version": "1.0.0",
+  "description": "The following guide is meant to bring clarity to customizing SharePoint and help you choose technologies that you can safely rely on for the foreseeable future.",
+  "homepage": "https://rencore.com",
+  "author": {
+    "name": "Rencore",
+    "email": "services@rencore.com",
+    "url": "https://rencore.com"
+  },
+  "contributors": [
+    "Waldek Mastykarz"
+  ],
+  "license": "CC-BY-NC-ND-4.0"
+}
