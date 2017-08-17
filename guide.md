@@ -32,7 +32,7 @@ JavaScript Object Model|Avoid|Limited and not invested in anymore. Consider usin
 
 Customization capability|Status|Comments
 ------------------------|------|--------
-Ribbon customization via User Custom Actions|Caution|Support for user custom actions are limited in the modern UI. If you have ribbon actions using a simple URL with URL token, they will work on classic and modern UI's. IF you use anything else, then avoid this and wait for GA of SharePoint Framework Extensions. See https://msdn.microsoft.com/en-us/pnp_articles/modern-experience-customizations-customize-lists-and-libraries#user-custom-actions for the supported scenarios.
+Ribbon customization via User Custom Actions|Caution|Support for user custom actions are limited in the modern UI. If you have ribbon actions using a simple URL with URL token, they will work on classic and modern UI's. If you use anything else, then avoid this and wait for GA of SharePoint Framework Extensions. See https://msdn.microsoft.com/en-us/pnp_articles/modern-experience-customizations-customize-lists-and-libraries#user-custom-actions for the supported scenarios.
 JS Link|Caution|While not upgradeable to the modern UI, JS Link is the only way to customize fields for the classic UI. For full support of both the classic and the modern UI needs to be complimented by SharePoint Framework extensions which are currently in developer preview.
 Script injection via User Custom Actions|Caution|Required to customize the classic UI. Avoid DOM manipulation as its error-prone and not supported in the modern UI.
 Display Templates|Caution|Necessary to customize the classic SharePoint Search results but not upgradeable to the modern UI. Will likely need to be redone from scratch for the modern UI.
