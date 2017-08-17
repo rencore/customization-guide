@@ -9,7 +9,8 @@
     "url": "https://rencore.com"
   },
   "contributors": [
-    "Waldek Mastykarz"
+    "Waldek Mastykarz <waldek@mastykarz.nl> (https://blog.mastykarz.nl)",
+    "Mikael Svenson <miksvenson@gmail.com> (http://techmikael.blogspot.com/)"
   ],
   "license": "CC-BY-NC-ND-4.0"
 }
