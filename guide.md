@@ -4,7 +4,7 @@ The following guide is meant to bring clarity to customizing SharePoint and help
 
 > **Disclaimer:** This page is based on our experience in customizing SharePoint and we provide no guarantee to its completeness or accuracy.
 
-Last Update: July 12th, 2017
+Last Update: August 17th, 2017
 
 ## Avoid
 
