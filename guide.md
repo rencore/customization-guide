@@ -41,7 +41,7 @@ Content Search Web Part-based solutions|Caution|Not available in the modern UI. 
 Search Query Web Part-based solutions|Caution|Not available in the modern UI. Customization will likely need to be redone from scratch for the modern UI.
 Content Type Hub|Caution|Often required for ECM scenarios but beware of timing issues when creating new sites. Content Types are also not added to new document libraries. Consider using remote provisioning instead.
 Microsoft PowerApps|Caution|Early technology. Research its limitations before relying on it for your solution.
-Microsoft Flow|Caution|Early technology. Research its limitations before relying on it for your solution.
+Microsoft Flow|Caution|Early technology. Research its limitations before relying on it for your solution as it's not as complete towards SharePoint as SharePoint Designer workflow. Also take a look at Logic Apps, which is the technology behind Flow. See https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs for information on when to use Flow and when to use Logic Apps.
 SharePoint Framework extensions|Caution|Developer preview only, not supported in production yet. Research for applicability but don't use in production just yet.
 Publishing Sites|Caution|The only way to implement publishing in SharePoint but at the moment has unclear future regarding how publishing will look like on top of the SharePoint Framework and to what extent current customization efforts will be upgradeable.
 
