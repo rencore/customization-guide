@@ -43,7 +43,7 @@ Content Type Hub|Caution|Often required for ECM scenarios but beware of timing i
 Microsoft PowerApps|Caution|Early technology. Research its limitations before relying on it for your solution.
 Microsoft Flow|Caution|Early technology. Research its limitations before relying on it for your solution as it's not as complete towards SharePoint as SharePoint Designer workflow. Also take a look at Logic Apps, which is the technology behind Flow. See https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs for information on when to use Flow and when to use Logic Apps.
 SharePoint Framework extensions|Caution|Developer preview only, not supported in production yet. Research for applicability but don't use in production just yet.
-Publishing Sites|Caution|The only way to implement publishing in SharePoint but at the moment has unclear future regarding how publishing will look like on top of the SharePoint Framework and to what extent current customization efforts will be upgradeable.
+Publishing Sites|Caution|The only way to implement publishing in SharePoint, but at the moment has unclear future regarding how publishing will look like on top of the SharePoint Framework and to what extent current customization efforts will be upgradeable. The new Communication sites is an option, but does not currently have feature parity on for example multi language support, content approval, set publish dates and custom page layouts - so depending on your need, they might not be a perfect match right now. It is however possible to use code to program in these features, but might not give a great ROI in the long run.
 
 ## Do
 
