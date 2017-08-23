@@ -1,4 +1,4 @@
-# RENCORE’S CUSTOMIZATION GUIDE
+## SHAREPOINT CUSTOMIZATIONS CAPABILITIES GUIDE
 
 The following guide is meant to bring clarity to customizing SharePoint and help you choose technologies that you can safely rely on for the foreseeable future. The intent is to provide our best recommendations regarding current and upcoming customizing practices and to provide some additional insight in our recommendations.
 
@@ -6,7 +6,7 @@ The following guide is meant to bring clarity to customizing SharePoint and help
 
 Last Update: August 18th, 2017
 
-## Avoid
+### Avoid
 
 Customization capability|Status|Comments
 ------------------------|------|--------
@@ -28,7 +28,7 @@ Access applications|Avoid|Deprecated. Consider using Microsoft PowerApps instead
 Declarative provisioning via no-code Sandboxed Solutions|Avoid|Based on declarative provisioning which should be avoided due to its limitations. Use remote provisioning instead.
 JavaScript Object Model|Avoid|Limited and not invested in anymore. Consider using REST or SP PnP JS Core instead
 
-## Caution
+### Caution
 
 Customization capability|Status|Comments
 ------------------------|------|--------
@@ -45,7 +45,7 @@ Microsoft Flow|Caution|Early technology. Research its limitations before relying
 SharePoint Framework extensions|Caution|Developer preview only, not supported in production yet. Research for applicability but don't use in production just yet.
 Publishing Sites|Caution|The only way to implement publishing in SharePoint, but at the moment has unclear future regarding how publishing will look like on top of the SharePoint Framework and to what extent current customization efforts will be upgradeable. The new Communication sites is an option, but does not currently have feature parity on for example multi language support, content approval, set publish dates and custom page layouts - so depending on your need, they might not be a perfect match right now. It is however possible to use code to program in these features, but might not give a great ROI in the long run.
 
-## Do
+### Do
 
 Customization capability|Status|Comments
 ------------------------|------|--------
