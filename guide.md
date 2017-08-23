@@ -4,7 +4,7 @@ The following guide is meant to bring clarity to customizing SharePoint and help
 
 > **Disclaimer:** This page is based on our experience in customizing SharePoint and we provide no guarantee to its completeness or accuracy.
 
-Last Update: August 18th, 2017
+Last Update: August 23rd, 2017
 
 ### Avoid
 
@@ -59,4 +59,4 @@ SharePoint Framework client-side web parts|Do|Supported in both classic and mode
 Client-Side Object Model (CSOM)|Do|Simplifies communicating with SharePoint, actively managed. SLA-backed by Microsoft.
 SP PnP JS Core|Do|Significantly simplifies communicating with SharePoint in client-side solutions. Keep in mind that it's a community-driven effort with no SLA behind it.
 SP PnP Core|Do|Significantly simplifies communicating with SharePoint. Keep in mind that it's a community-driven effort with no SLA behind it.
-SharePoint Webhooks|Do| SharePoint Webhooks is a relative new functionality which allows you to receive notification when events happen**ed** in your lists. When an event happened, SharePoint sends minimal information about it to your service. If someone might intercept such a message, the data irrelevant as it only contains IDs. Your service has to actually gather the changes. Another key feature of SharePoint webhooks is that it has a retry-mechanism. Be aware that webhooks can only be used for events that happened. This does not cover event**-ing** events.
+SharePoint Webhooks|Do|SharePoint Webhooks is a relative new functionality which allows you to receive notification when events happen**ed** in your lists. When an event happened, SharePoint sends minimal information about it to your service. If someone might intercept such a message, the data is irrelevant as it only contains IDs. Your service has to actually gather the changes. Another key feature of SharePoint webhooks is that it has a retry-mechanism. Be aware that webhooks can only be used for events that happened. This does not cover event**-ing** events.
