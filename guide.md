@@ -1,12 +1,12 @@
-# RENCORE’S CUSTOMIZATION GUIDE
+## SHAREPOINT CUSTOMIZATIONS CAPABILITIES GUIDE
 
 The following guide is meant to bring clarity to customizing SharePoint and help you choose technologies that you can safely rely on for the foreseeable future. The intent is to provide our best recommendations regarding current and upcoming customizing practices and to provide some additional insight in our recommendations.
 
 > **Disclaimer:** This page is based on our experience in customizing SharePoint and we provide no guarantee to its completeness or accuracy.
 
-Last Update: August 18th, 2017
+Last Update: August 23rd, 2017
 
-## Avoid
+### Avoid
 
 Customization capability|Status|Comments
 ------------------------|------|--------
@@ -30,7 +30,7 @@ JavaScript Object Model|Avoid|Limited and not invested in anymore. Consider usin
 Event Receivers and List Event Receivers|Avoid|Event Receivers and List Event Receivers can only be used in on-premises environments as they require to be created with full trust code. Consider using Remote Event Receivers or Webhooks instead.
 Timer Jobs|Avoid|Timer Jobs can only be used in on-premises environments as they require full trust code. Consider developing your timer based jobs as Azure Web Jobs or Azure Functions.
 
-## Caution
+### Caution
 
 Customization capability|Status|Comments
 ------------------------|------|--------
@@ -48,7 +48,7 @@ SharePoint Framework extensions|Caution|Developer preview only, not supported in
 Publishing Sites|Caution|The only way to implement publishing in SharePoint, but at the moment has unclear future regarding how publishing will look like on top of the SharePoint Framework and to what extent current customization efforts will be upgradeable. The new Communication sites is an option, but does not currently have feature parity on for example multi language support, content approval, set publish dates and custom page layouts - so depending on your need, they might not be a perfect match right now. It is, however, possible to use code to program in these features, but might not give a great ROI in the long run.
 Remote Event Receivers|Caution|Remote Event Receivers allow you to interact with events of lists that are go**ing** to happen or happen**ed**. Be careful when using Remote Event Receivers as it does not have a retry-mechanism. If you only require interacting with your application when events happened, then please consider to check out SharePoint Webhooks.
 
-## Do
+### Do
 
 Customization capability|Status|Comments
 ------------------------|------|--------
@@ -60,4 +60,4 @@ SharePoint Framework client-side web parts|Do|Supported in both classic and mode
 Client-Side Object Model (CSOM)|Do|Simplifies communicating with SharePoint, actively managed. SLA-backed by Microsoft.
 SP PnP JS Core|Do|Significantly simplifies communicating with SharePoint in client-side solutions. Keep in mind that it's a community-driven effort with no SLA behind it.
 SP PnP Core|Do|Significantly simplifies communicating with SharePoint. Keep in mind that it's a community-driven effort with no SLA behind it.
-SharePoint Webhooks|Do| SharePoint Webhooks is a relative new functionality which allows you to receive notification when events happen**ed** in your lists. When an event happened, SharePoint sends minimal information about it to your service. If someone might intercept such a message, the data irrelevant as it only contains IDs. Your service has to actually gather the changes. Another key feature of SharePoint webhooks is that it has a retry-mechanism. Be aware that webhooks can only be used for events that happened. This does not cover event**-ing** events.
+SharePoint Webhooks|Do|SharePoint Webhooks is a relative new functionality which allows you to receive notification when events happen**ed** in your lists. When an event happened, SharePoint sends minimal information about it to your service. If someone might intercept such a message, the data is irrelevant as it only contains IDs. Your service has to actually gather the changes. Another key feature of SharePoint webhooks is that it has a retry-mechanism. Be aware that webhooks can only be used for events that happened. This does not cover event**-ing** events.
