@@ -28,6 +28,7 @@ Access applications|Avoid|Deprecated. Consider using Microsoft PowerApps instead
 Declarative provisioning via no-code Sandboxed Solutions|Avoid|Based on declarative provisioning which should be avoided due to its limitations. Use remote provisioning instead.
 JavaScript Object Model|Avoid|Limited and not invested in anymore. Consider using REST or SP PnP JS Core instead
 Event Receivers and List Event Receivers|Avoid|Event Receivers and List Event Receivers can only be used in on-premises environments as they require to be created with full trust code. Consider using Remote Event Receivers or Webhooks instead.
+Timer Jobs|Avoid|Timer Jobs can only be used in on-premises environments as they require full trust code. Consider developing your timer based jobs as Azure Web Jobs or Azure Functions.
 
 ### Caution
 
