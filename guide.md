@@ -4,7 +4,7 @@ The following guide is meant to bring clarity to customizing SharePoint and help
 
 > **Disclaimer:** This page is based on our experience in customizing SharePoint and we provide no guarantee to its completeness or accuracy.
 
-Last Update: September 1, 2017
+Last Update: October 27, 2017
 
 ### Avoid
 
@@ -34,8 +34,8 @@ Timer Jobs|Avoid|Timer Jobs can only be used in on-premises environments as they
 
 Customization capability|Status|Comments
 ------------------------|------|--------
-Ribbon customization via User Custom Actions|Caution|Support for user custom actions is limited in the modern UI. If you have ribbon actions using a simple URL with URL token, they will work on classic and modern UI's. If you use anything else, then avoid this and wait for GA of SharePoint Framework Extensions. See https://msdn.microsoft.com/en-us/pnp_articles/modern-experience-customizations-customize-lists-and-libraries#user-custom-actions for the supported scenarios.
-JS Link|Caution|While not upgradeable to the modern UI, JS Link is the only way to customize fields for the classic UI. For full support of both the classic and the modern UI needs to be complimented by SharePoint Framework extensions which are currently in developer preview.
+Ribbon customization via User Custom Actions|Caution|Support for user custom actions is limited in the modern UI. If you have ribbon actions using a simple URL with URL token, they will work on classic and modern UI's. If you use anything else, then avoid this and use SharePoint Framework Extensions instead. See https://msdn.microsoft.com/en-us/pnp_articles/modern-experience-customizations-customize-lists-and-libraries#user-custom-actions for the supported scenarios.
+JS Link|Caution|While not upgradeable to the modern UI, JS Link is the only way to customize fields for the classic UI. For full support of both the classic and the modern UI needs to be complimented by SharePoint Framework extensions.
 Script injection via User Custom Actions|Caution|Required to customize the classic UI. Avoid DOM manipulation as its error-prone and not supported in the modern UI.
 Display Templates|Caution|Necessary to customize the classic SharePoint Search results but not upgradeable to the modern UI. Will likely need to be redone from scratch for the modern UI.
 Content Query Web Part-based solutions|Caution|Limited to a single site collection but often required when you can't wait for new content to be crawled by search. If search latency is not an issue, consider using Content Search Web Part instead which is more powerful.
@@ -44,7 +44,6 @@ Search Query Web Part-based solutions|Caution|Not available in the modern UI. Cu
 Content Type Hub|Caution|Often required for ECM scenarios but beware of timing issues when creating new sites. Content Types are also not added to new document libraries. Consider using remote provisioning instead.
 Microsoft PowerApps|Caution|Early technology. Research its limitations before relying on it for your solution.
 Microsoft Flow|Caution|Early technology. Research its limitations before relying on it for your solution as it's not as complete towards SharePoint as SharePoint Designer workflow. Also take a look at Logic Apps, which is the technology behind Flow. See https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs for information on when to use Flow and when to use Logic Apps.
-SharePoint Framework extensions|Caution|Developer preview only, not supported in production yet. Research for applicability but don't use in production just yet.
 Publishing Sites|Caution|The only way to implement publishing in SharePoint, but at the moment has unclear future regarding how publishing will look like on top of the SharePoint Framework and to what extent current customization efforts will be upgradeable. The new Communication sites is an option, but does not currently have feature parity on for example multi language support, content approval, set publish dates and custom page layouts - so depending on your need, they might not be a perfect match right now. It is, however, possible to use code to program in these features, but might not give a great ROI in the long run.
 Remote Event Receivers|Caution|Remote Event Receivers allow you to interact with events of lists that are go**ing** to happen or happen**ed**. Be careful when using Remote Event Receivers as it does not have a retry-mechanism. If you only require interacting with your application when events happened, then please consider to check out SharePoint Webhooks.
 
@@ -57,6 +56,7 @@ Custom Site Columns|Do|Required for ECM scenarios. Avoid declarative provisionin
 Single Page Applications hosted in SharePoint|Do|Still a reliable way of building applications for SharePoint Online. No alternative in the SharePoint Framework available at the moment.
 Provider-hosted add-ins|Do|Still valid approach for building SharePoint solutions. Consider SharePoint Framework client-side web parts instead unless you require web part isolation.
 SharePoint Framework client-side web parts|Do|Supported in both classic and modern UI. Actively developed and invested in.
+SharePoint Framework extensions|Do|Supported in modern UI. Actively developed and invested in. When working with classic UI, you need to use their equivalents such as Custom Actions or JSLink.
 Client-Side Object Model (CSOM)|Do|Simplifies communicating with SharePoint, actively managed. SLA-backed by Microsoft.
 SP PnP JS Core|Do|Significantly simplifies communicating with SharePoint in client-side solutions. Keep in mind that it's a community-driven effort with no SLA behind it.
 SP PnP Core|Do|Significantly simplifies communicating with SharePoint. Keep in mind that it's a community-driven effort with no SLA behind it.
