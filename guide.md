@@ -4,7 +4,7 @@ The following guide is meant to bring clarity to customizing SharePoint and help
 
 > **Disclaimer:** This page is based on our experience in customizing SharePoint and we provide no guarantee to its completeness or accuracy.
 
-Last Update: October 27, 2017
+Last Update: April 30, 2018
 
 ### Avoid
 
@@ -42,10 +42,12 @@ Content Query Web Part-based solutions|Caution|Limited to a single site collecti
 Content Search Web Part-based solutions|Caution|Not available in the modern UI. Customization will likely need to be redone from scratch for the modern UI.
 Search Query Web Part-based solutions|Caution|Not available in the modern UI. Customization will likely need to be redone from scratch for the modern UI.
 Content Type Hub|Caution|Often required for ECM scenarios but beware of timing issues when creating new sites. Content Types are also not added to new document libraries. Consider using remote provisioning instead.
-Microsoft PowerApps|Caution|Early technology. Research its limitations before relying on it for your solution.
-Microsoft Flow|Caution|Early technology. Research its limitations before relying on it for your solution as it's not as complete towards SharePoint as SharePoint Designer workflow. Also take a look at Logic Apps, which is the technology behind Flow. See https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs for information on when to use Flow and when to use Logic Apps.
+Classic team sites|Caution|No new features are being added to at the moment. Consider using modern team sites instead.
 Publishing Sites|Caution|The only way to implement publishing in SharePoint, but at the moment has unclear future regarding how publishing will look like on top of the SharePoint Framework and to what extent current customization efforts will be upgradeable. The new Communication sites is an option, but does not currently have feature parity on for example multi language support, content approval, set publish dates and custom page layouts - so depending on your need, they might not be a perfect match right now. It is, however, possible to use code to program in these features, but might not give a great ROI in the long run.
 Remote Event Receivers|Caution|Remote Event Receivers allow you to interact with events of lists that are go**ing** to happen or happen**ed**. Be careful when using Remote Event Receivers as it does not have a retry-mechanism. If you only require interacting with your application when events happened, then please consider to check out SharePoint Webhooks.
+Hub sites|Caution|Powerful capability to organize sites in your portal. Currently in preview. Research, but don't use in production just yet. For more information see https://techcommunity.microsoft.com/t5/SharePoint-Blog/SharePoint-hub-sites-new-in-Office-365/ba-p/109547
+AadHttpClient|Caution|Powerful capability to connect SharePoint Framework solutions to APIs secured with Azure AD. Currently in preview. Research, but don't use in production just yet. For more information see https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient
+MSGraphClient|Caution|Powerful capability to connect SharePoint Framework solutions to the Microsoft Graph. Currently in preview. Research, but don't use in production just yet. For more information see https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-msgraph
 
 ### Do
 
@@ -60,6 +62,11 @@ SharePoint Framework extensions|Do|Supported in modern UI. Actively developed an
 Client-Side Object Model (CSOM)|Do|Simplifies communicating with SharePoint, actively managed. SLA-backed by Microsoft.
 SP PnP JS Core|Do|Significantly simplifies communicating with SharePoint in client-side solutions. Keep in mind that it's a community-driven effort with no SLA behind it.
 SP PnP Core|Do|Significantly simplifies communicating with SharePoint. Keep in mind that it's a community-driven effort with no SLA behind it.
+Microsoft PowerApps|Do|Actively developed and invested in.
+Microsoft Flow|Do|Actively developed and invested in. Take into consideration that all flows are linked to users who created them. Also take a look at Logic Apps, which is the technology behind Flow. See https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs for information on when to use Flow and when to use Logic Apps.
+Microsoft Logic Apps|Do|Actively developed and invested in. See https://docs.microsoft.com/en-us/azure/azure-functions/functions-compare-logic-apps-ms-flow-webjobs for information on when to use Flow and when to use Logic Apps.
 SharePoint Webhooks|Do|SharePoint Webhooks is a relative new functionality which allows you to receive notification when events happen**ed** in your lists. When an event happened, SharePoint sends minimal information about it to your service. If someone might intercept such a message, the data is irrelevant as it only contains IDs. Your service has to actually gather the changes. Another key feature of SharePoint webhooks is that it has a retry-mechanism. Be aware that webhooks can only be used for events that happened. This does not cover events currently **happening**.
 Long-running operations (SharePoint Online)|Do|When you want to develop long-running operations for SharePoint Online you have two options: Azure Functions or Web Jobs. Both can achieve the same thing, although the user experience of Azure Functions is better. Be aware that when running Functions on a consumption plan, the tasks have a 5-minute timeout. This timeout is removed when your Azure Function app is configured with an App Service plan.
 Long-running operations (on-premises)|Do|When you want to develop long-running operations for SharePoint on-premises you can do this with scheduled tasks. Here you can choose for PowerShell (optional in combination with SP PnP PowerShell) or a console app.
+Modern team sites|Do|Actively developed and invested in. Regularly extended with new features. Group different workloads like conversations, documents and tasks to better facilitate collaboration. Also, offer native support for mobile devices.
+Communication sites|Do|Actively developed and invested in. Regularly extended with new features. While not a full-featured replacement for classic publishing sites just yet, they become more powerful as more capabilities are being added. Also, offer native support for mobile devices.
