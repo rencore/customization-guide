@@ -4,7 +4,7 @@ The following guide is meant to bring clarity to customizing SharePoint and help
 
 > **Disclaimer:** This page is based on our experience in customizing SharePoint and we provide no guarantee to its completeness or accuracy.
 
-Last Update: April 30, 2018
+Last Update: June 12, 2018
 
 ### Avoid
 
@@ -45,7 +45,6 @@ Content Type Hub|Caution|Often required for ECM scenarios but beware of timing i
 Classic team sites|Caution|No new features are being added to at the moment. Consider using modern team sites instead.
 Publishing Sites|Caution|The only way to implement publishing in SharePoint, but at the moment has unclear future regarding how publishing will look like on top of the SharePoint Framework and to what extent current customization efforts will be upgradeable. The new Communication sites is an option, but does not currently have feature parity on for example multi language support, content approval, set publish dates and custom page layouts - so depending on your need, they might not be a perfect match right now. It is, however, possible to use code to program in these features, but might not give a great ROI in the long run.
 Remote Event Receivers|Caution|Remote Event Receivers allow you to interact with events of lists that are go**ing** to happen or happen**ed**. Be careful when using Remote Event Receivers as it does not have a retry-mechanism. If you only require interacting with your application when events happened, then please consider to check out SharePoint Webhooks.
-Hub sites|Caution|Powerful capability to organize sites in your portal. Currently in preview. Research, but don't use in production just yet. For more information see https://techcommunity.microsoft.com/t5/SharePoint-Blog/SharePoint-hub-sites-new-in-Office-365/ba-p/109547
 AadHttpClient|Caution|Powerful capability to connect SharePoint Framework solutions to APIs secured with Azure AD. Currently in preview. Research, but don't use in production just yet. For more information see https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient
 MSGraphClient|Caution|Powerful capability to connect SharePoint Framework solutions to the Microsoft Graph. Currently in preview. Research, but don't use in production just yet. For more information see https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-msgraph
 
@@ -70,3 +69,4 @@ Long-running operations (SharePoint Online)|Do|When you want to develop long-run
 Long-running operations (on-premises)|Do|When you want to develop long-running operations for SharePoint on-premises you can do this with scheduled tasks. Here you can choose for PowerShell (optional in combination with SP PnP PowerShell) or a console app.
 Modern team sites|Do|Actively developed and invested in. Regularly extended with new features. Group different workloads like conversations, documents and tasks to better facilitate collaboration. Also, offer native support for mobile devices.
 Communication sites|Do|Actively developed and invested in. Regularly extended with new features. While not a full-featured replacement for classic publishing sites just yet, they become more powerful as more capabilities are being added. Also, offer native support for mobile devices.
+Hub sites|Do|Powerful capability to organize sites in your portal.
