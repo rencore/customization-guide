@@ -4,7 +4,7 @@ The following guide is meant to bring clarity to customizing SharePoint and help
 
 > **Disclaimer:** This page is based on our experience in customizing SharePoint and we provide no guarantee to its completeness or accuracy.
 
-Last Update: July 4, 2018
+Last Update: October 3, 2018
 
 ### Avoid
 
@@ -43,11 +43,8 @@ Content Search Web Part-based solutions|Caution|Not available in the modern UI. 
 Search Query Web Part-based solutions|Caution|Not available in the modern UI. Customization will likely need to be redone from scratch for the modern UI.
 Content Type Hub|Caution|Often required for ECM scenarios but beware of timing issues when creating new sites. Content Types are also not added to new document libraries. Consider using remote provisioning instead.
 Classic team sites|Caution|No new features are being added to at the moment. Consider using modern team sites instead.
-Publishing Sites|Caution|The only way to implement publishing in SharePoint, but at the moment has unclear future regarding how publishing will look like on top of the SharePoint Framework and to what extent current customization efforts will be upgradeable. The new Communication sites is an option, but does not currently have feature parity on for example multi language support, content approval, set publish dates and custom page layouts - so depending on your need, they might not be a perfect match right now. It is, however, possible to use code to program in these features, but might not give a great ROI in the long run.
+Publishing Sites|Caution|The only way to implement publishing in SharePoint, but at the moment has unclear future regarding how publishing will look like on top of the SharePoint Framework and to what extent current customization efforts will be upgradeable. The new Communication sites is an option, but does not currently have feature parity on for example multi language support, scheduled publishing or custom page layouts - so depending on your need, they might not be a perfect match right now. It is, however, possible to use code to program in these features, but might not give a great ROI in the long run.
 Remote Event Receivers|Caution|Remote Event Receivers allow you to interact with events of lists that are go**ing** to happen or happen**ed**. Be careful when using Remote Event Receivers as it does not have a retry-mechanism. If you only require interacting with your application when events happened, then please consider to check out SharePoint Webhooks.
-AadHttpClient|Caution|Powerful capability to connect SharePoint Framework solutions to APIs secured with Azure AD. Currently in preview. Research, but don't use in production just yet. For more information see https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient
-MSGraphClient|Caution|Powerful capability to connect SharePoint Framework solutions to the Microsoft Graph. Currently in preview. Research, but don't use in production just yet. For more information see https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-msgraph
-Microsoft PowerApps|Caution|Actively developed and invested in. PowerApps must be republished at least once every 6 months or they might stop working. For more information see https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/save-publish-app
 
 ### Do
 
@@ -70,3 +67,6 @@ Long-running operations (on-premises)|Do|When you want to develop long-running o
 Modern team sites|Do|Actively developed and invested in. Regularly extended with new features. Group different workloads like conversations, documents and tasks to better facilitate collaboration. Also, offer native support for mobile devices.
 Communication sites|Do|Actively developed and invested in. Regularly extended with new features. While not a full-featured replacement for classic publishing sites just yet, they become more powerful as more capabilities are being added. Also, offer native support for mobile devices.
 Hub sites|Do|Powerful capability to organize sites in your portal.
+AadHttpClient|Do|The recommended way to connect SharePoint Framework solutions to APIs secured with Azure AD. Generally available. For more information see https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-aadhttpclient
+MSGraphClient|Do|The recommended way to connect SharePoint Framework solutions to the Microsoft Graph. Generally available. For more information see https://docs.microsoft.com/en-us/sharepoint/dev/spfx/use-msgraph
+Microsoft PowerApps|Do|Actively developed and invested in. Regularly publishing PowerApps allows you to benefit of the latest improvements and fixes but it's not necessary. For more information see https://docs.microsoft.com/en-us/powerapps/maker/canvas-apps/save-publish-app
